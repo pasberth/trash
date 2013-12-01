@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>pasberth.github.io/about</title>
+    <style type="text/css">
+.panel {
+    background-color: silver;
+    width: calc(100% - 128px);
+    height: calc(100% - 128px);
+    position: absolute;
+    top: calc(0px - 200%);
+    left: 128px;
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.panel:target {
+    opacity: 1;
+    top: 0;
+    left: 128px;
+}
+
+.navigation {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    margin: 0;
+    padding: 0;
+    width: 128px;
+    height: 64px;
+    background-color: white;
+}
+
+#a:target ~ .navigation #a_ {
+    background-color: silver;
+}
+
+#b:target ~ .navigation #b_ {
+    background-color: silver;
+}
+
+#home:target ~ .navigation #home_ {
+    background-color: silver;
+}
+
+#home { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="home">
+        home
+    </div>
+
+    <div class="panel" id="a">
+        hoge
+    </div>
+
+    <div class="panel" id="b">
+        fuga
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li id="home_"><a href="#home">Home</a></li>
+            <li id="a_"><a href="#a">a</a></li>
+            <li id="b_"><a href="#b">b</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
